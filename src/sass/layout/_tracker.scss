@@ -1,7 +1,102 @@
+@use '../utilities/variables' as v;
+
 .tracker{
     height: 30%;
     width: 100%;
     background: url(/dist/images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    &__container{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tracker-title{
+    font-size: 2rem;
+    color: v.$c-white;
+    font-weight: map-get(v.$font-bold, 'regular');
+    margin-bottom: 1rem;
+}
+
+.tracker-form{
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+
+
+    &__input{
+        width: 30rem;
+        min-width: 18rem;
+        height: auto;
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: v.$border-radius 0 0 v.$border-radius;
+        color: v.$c-primary-color;
+        cursor: pointer;
+    }
+
+    &__button{
+        align-self: stretch;
+        width: 3rem;
+        border: none;
+        border-radius: 0 v.$border-radius v.$border-radius 0;
+        background-color: v.$c-secundary-color;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            background-color: rgba($color: v.$c-secundary-color, $alpha: .8);
+        }
+    }
+}
+
+
+.tracker-info{
+    padding: 2rem 0;
+    background-color: v.$c-white;
+    border-radius: v.$border-radius;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    position: relative;
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item{
+        padding: 0 2rem;
+
+        &:not(:nth-last-child(1)){
+            border-right: 1px solid rgba(v.$c-primary-color, .5);
+        }
+    }
+}
+
+.tracker-info-title{
+    font-size: .7rem;
+    text-transform: uppercase;
+    font-weight: map-get(v.$font-bold , 'medium');
+    color: v.$c-primary-color;
+    letter-spacing: .1rem;
+    margin-bottom: .5rem;
+}
+
+.tracker-info-data{
+    font-size: 1.3rem;
+    font-weight: map-get(v.$font-bold, 'medium');
+}
+
+.fa-chevron-up,
+.fa-chevron-down{
+    fill: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }

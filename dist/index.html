@@ -15,22 +15,46 @@
       <div class="tracker__container">
         <h1 class="tracker-title">IP Address Tracker</h1>
         <form action="#" class="tracker-form">
-          <input type="text" class="tracker-form__input" placeholder="Search for any IP address or domain">
-          <button class="tracker-form__submit"></button>
+          <input type="text" class="tracker-form__input" placeholder="Search for any IP address or domain...">
+          <button class="tracker-form__button"><img src="/dist/images/icon-arrow.svg"></i></button>
         </form>
+        <div class="tracker-info">
+          <div class="tracker-info__items">
+            <div class="tracker-info__item">
+              <h2 class="tracker-info-title">IP Address</h2>
+              <p class="tracker-info-data">192.212.174.101</p>
+            </div>
+            <div class="tracker-info__item">
+              <h2 class="tracker-info-title">Location</h2>
+              <p class="tracker-info-data">Brooklyn, NY 10001</p>
+            </div>
+            <div class="tracker-info__item">
+              <h2 class="tracker-info-title">Timezone</h2>
+              <p class="tracker-info-data">UTC -5:00</p>
+            </div>
+            <div class="tracker-info__item">
+              <h2 class="tracker-info-title">UTC</h2>
+              <p class="tracker-info-data">SpaceX Starlink</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-up" id="collapseMenu"></i>
+        </div>
       </div>
     </section>
     <section class="map"></section>
   </main>
 
-  IP Address Tracker
+  <!-- IP Address Tracker
 
   Search for any IP address or domain
 
   IP Address
   Location
   Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+    UTC add offset value dynamically using the API
+  ISP -->
+
+  <script src="https://kit.fontawesome.com/1093ee2c20.js" crossorigin="anonymous"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>
