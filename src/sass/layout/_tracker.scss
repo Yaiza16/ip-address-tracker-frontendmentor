@@ -1,5 +1,6 @@
 @use '../utilities/variables' as v;
 @use '../utilities/functions' as f;
+@use '../utilities/mixins' as m;
 
 .tracker{
     height: 30%;
@@ -21,6 +22,8 @@
     color: v.$c-white;
     font-weight: map-get(v.$font-bold, 'regular');
     margin-bottom: 1rem;
+    text-align: center;
+
 }
 
 .tracker-form{
@@ -29,6 +32,9 @@
     display: flex;
     margin-bottom: 1rem;
 
+    @include m.mq('sm'){
+        width: 90%;
+    }
 
     &__input{
         width: 30rem;
@@ -39,6 +45,15 @@
         border-radius: v.$border-radius 0 0 v.$border-radius;
         color: v.$c-primary-color;
         cursor: pointer;
+
+        @include m.mq('md'){
+            width: 80%
+        }
+
+        @include m.mq('sm'){
+            width: calc(100% - 3rem);
+            min-width: unset;
+        }
     }
 
     &__button{
@@ -66,9 +81,29 @@
     min-width: f.toRem(800);
     position: relative;
 
+    @include m.mq('lg'){
+        min-width: f.toRem(400);
+        width: 80%;
+        align-items: center;
+    }
+
+    @include m.mq('sm'){
+        width: 90%;
+        min-width: unset;
+        align-items: center;
+    }
+
+
     &__items{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+
+        @include m.mq('lg'){
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, auto);
+            justify-content: center;
+            gap: 2rem;
+        }
 
         &--closed{
             display: none;
@@ -80,6 +115,10 @@
 
         &:not(:nth-last-child(1)){
             border-right: 1px solid rgba(v.$c-primary-color, .5);
+
+            @include m.mq('lg'){
+                border-right: unset;
+            }
         }
     }
 }
