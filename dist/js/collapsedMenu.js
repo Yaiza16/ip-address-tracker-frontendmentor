@@ -1,4 +1,4 @@
-export default function collapseMenu(){
+export default function collapsedMenu(){
     const button = document.getElementById('collapseMenu');
     const tracker = document.getElementById('tracker-items');
 

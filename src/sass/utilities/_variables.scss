@@ -1,17 +1,26 @@
-//Fonts
+@use 'functions' as f;
+
+/* Fonts */
 $font-family: 'Rubik', sans-serif;
 $font-bold: (
     'regular': 400,
     'medium': 500,
     'bold': 700
 );
+$font-size: 18px;
 
 
-//Colors
+/* Colors */
 $c-primary-color: rgb(150, 150, 150);
 $c-secundary-color: rgb(43, 43, 43);
 $c-white: rgb(255, 255, 255);
 
 
-//Others
-$border-radius: .7rem
+/* Others */
+$border-radius: .7rem;
+
+/* Media query breakpoints */
+$breakpoints: (
+    'lg': f.toRem(800),
+
+);

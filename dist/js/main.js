@@ -1,3 +1,3 @@
-import collapseMenu from "./collapseMenu.js";
+import collapsedMenu from "./collapsedMenu.js";
 
-collapseMenu();
+collapsedMenu();

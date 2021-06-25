@@ -1,4 +1,5 @@
 @use '../utilities/variables' as v;
+@use '../utilities/functions' as f;
 
 .tracker{
     height: 30%;
@@ -62,6 +63,7 @@
     border-radius: v.$border-radius;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 80%;
+    min-width: f.toRem(800);
     position: relative;
 
     &__items{

@@ -1,0 +1,7 @@
+@use "sass:math";
+@use 'variables' as v;
+
+@function toRem($px){
+    $rem: math.div($px, 18)+rem;
+    @return $rem;
+}
