@@ -82,6 +82,9 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.tracker-info__items--closed {
+  display: none;
+}
 .tracker-info__item {
   padding: 0 2rem;
 }

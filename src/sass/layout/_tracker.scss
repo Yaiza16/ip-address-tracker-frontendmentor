@@ -67,6 +67,10 @@
     &__items{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+
+        &--closed{
+            display: none;
+        }
     }
 
     &__item{
