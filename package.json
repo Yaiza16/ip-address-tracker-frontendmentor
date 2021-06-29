@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Yaiza16/ip-address-tracker-frontendmentor#readme",
   "devDependencies": {
     "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
   }
 }

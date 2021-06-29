@@ -80,6 +80,7 @@
     width: 80%;
     min-width: f.toRem(800);
     position: relative;
+    z-index: 2;
 
     @include m.mq('lg'){
         min-width: f.toRem(400);
